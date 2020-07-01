@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>搜索结果_{dede:global.cfg_webname/}</title>
+<link href="{dede:global.cfg_templets_skin/}/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/all.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/a.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container"> {dede:include filename="head.htm"/}
+    <!---首页内容--->
+    <div id="page">
+        <div class="where">搜索结果<span>Search</span></div>
+        <div class="left_menu fl">
+            <div class="left_menu_top"></div>
+            <div class="left_menu_content">
+                <ul>
+                    <li><a href="#" title="" class="menu_dangqian">搜索结果</a></li>
+                </ul>
+            </div>
+            <div class="left_menu_bottom"></div>
+        </div>
+        <div class=" fr">
+            <div class="right_top"></div>
+            <div class="right_content">
+                <div class="search_box">
+                    <form>
+                        <input name="q" type="text" class="inputbg" id="search-keyword" value="{dede:global name='keyword' function='RemoveXSS(@me)'/}" onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+                        <select name="searchtype" id="search-option">
+                            <option value="title" selected='1'>检索标题</option>
+                            <option value="titlekeyword">智能模糊</option>
+                        </select>
+                        <button type="submit" class="search-submit" style="background:url({dede:global.cfg_templets_skin/}/img/index_r7_c22.jpg); border:none; width:56px; height:23px; color:#fff;">搜索</button>
+                    </form>
+                </div>
+                <div class="result_content">
+                    <div class="sidebar"> </div>
+                    <div class="resultlist">
+                        <ul>
+                            {dede:list perpage='20'}
+                            <li>
+                                <h3 class="mt20" style=" height:30px; line-height:30px;border-bottom:1px dotted #ddd;"><a href="[field:arcurl/]" target="_blank">[field:title/]&nbsp;&nbsp;<b style="color:#ff0000;">[field:flag/]</b></a></h3>
+                                <p style="color:#666; line-height:23px; padding:10px; font-size:12px;">[field:description/]...</p>
+                                <span> <a href="[field:arcurl/]">[field:global.cfg_basehost/][field:arcurl/]</a> <small>分类：</small><a href="[field:typeurl/]" target="_blank">[field:typename/]</a> <small>点击：</small>[field:click/] <small>日期：</small>[field:stime/] </span> </li>
+                            {/dede:list}
+                        </ul>
+                        <div class="fl dede_pages">
+                            <ul class="pagelist">
+                                {dede:pagelist listsize='4'/}
+                            </ul>
+                        </div>
+                        <!-- /pages -->
+                    </div>
+                    <!-- /listbox -->
+                </div>
+            </div>
+            <div class="right_bottom"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!---首页内容结束--->
+    {dede:include filename="footer.htm"/} </div>
+</body>
+</html>

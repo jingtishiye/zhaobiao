@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{dede:field.seotitle /}-{dede:global.cfg_webname/}</title>
+<link href="{dede:global.cfg_templets_skin/}/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/all.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/a.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="ie6png/iepngfix_tilebg.js"></script>
+</head>
+<body>
+<div id="container">
+    {dede:include filename="head.htm"/}
+    <!---首页内容--->
+    <div id="page">
+	
+		<div class="where">资料下载<span>Download
+</span></div>
+		
+		<div class="left_menu fl">
+			<div class="left_menu_top"></div>
+			<div class="left_menu_content">
+				<ul>
+					<li><a href="/a/ziliaoxiazai/index.html" title=""   class="menu_dangqian">资料下载</a></li>
+				</ul>
+			</div>
+			<div class="left_menu_bottom"></div>
+		</div>
+		
+		
+		<div class=" fr">
+			<div class="right_top"></div>
+			<div class="right_content">
+				<div class="tab">
+					<a href="#" title="" class="zhaobiao_dangqian">资料下载</a>
+					<div class="clear"></div>
+				</div>
+				
+				<ul class="zhaobiao_list">
+					{dede:list col='1' titlelen='90' nfolen='100' imgwidth='60' imgheight='40' pagesize='30' typeid=''}
+					 <li><a href="[field:arcurl/]" title="[field:title/]"><span class="tit">[[field:typename/]]</span>[field:title/]&nbsp;&nbsp;<b style="color:#ff0000;">[field:flag/]</b></a><span class="time">[field:stime/]</span></li>
+					 {/dede:list}
+                    <div class="clear"></div>
+                </ul>
+				<ul class="mt20 fenye2" style="color:#666;">{dede:pagelist listsize='5' listitem='index pre pageno next end option'/}<div class="clear"></div></ul>
+				
+				
+			</div>
+			<div class="right_bottom"></div>
+		</div>
+		<div class="clear"></div>
+		
+	
+    </div>
+    <!---首页内容结束--->
+ {dede:include filename="footer.htm"/} 
+</div>
+</body>
+</html>

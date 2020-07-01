@@ -1,0 +1,1 @@
+INSERT INTO `dede_member_guestbook` VALUES('1','1','','asd','admin','','','','127.0.0.1','1340107920','fsadfasdfasdf');

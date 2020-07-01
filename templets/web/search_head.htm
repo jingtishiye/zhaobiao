@@ -1,0 +1,69 @@
+<!---头部--->
+
+<div id="header">
+    <div id="header_content"> <a href="/index.html" title="" class="logo"></a>
+        <div class="toplink"> <a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{dede:global.cfg_basehost/}');">设为首页</a> | <a href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')">加入收藏</a> | <a href="/a/contact.html" title="">联系我们</a> </div>
+    </div>
+</div>
+<!---头部结束--->
+<!---导航--->
+<div id="mainnav">
+    <div id="mainnav_content">
+        <ul>
+            <li><a href="/index.html" title="">首页</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/gaikuang/2012/0619/87.html" title="">公司概况</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/fuwuliucheng/20120619/89.html" title="">服务流程</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/zhaobiao/index_1.html" title="">招标采购</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/zhongyaotongzhi/index.html" title="">重要通知</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/zhengcefagui/index.html" title="">政策法规</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/chengpinzhuanjia/index.html" title="">诚聘专家</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/ziliaoxiazai/index.html" title="">资料下载</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/rencaizhaopin/index.html" title="">人才招聘</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/lianxiwomen/20120619/88.html" title="">联系我们</a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</div>
+<!---导航结束--->
+<!---重要通知-->
+<div class="zhongyao"> 
+<?php
+$sql_affiche = "select * from dede_archives where typeid = 38 order by id desc limit 1";
+$db->Execute("affiche", $sql_affiche);
+while ($row = $db->GetArray("affiche")) {
+$arcinfo = GetOneArchive($row["id"]);
+?>
+<a href="<?php echo $arcinfo["arcurl"];?>" title="<?php echo $row["title"];?>" class="zh1 displayb fl"><?php echo $row["title"];?>  <?php echo date("Y-m-d",$row["pubdate"]);?></a>
+<?php
+}
+?>
+    <div class="search fr">
+        <form name="formsearch" action="/search.php" method="post">
+            <label>信息查询  </label>
+            <select name="searchbox">
+                <option value="1"<?php echo  $searchtype == 1? "selected=\"selected\"" : "";?>>招标编号</option>
+				<option value="2"<?php echo  $searchtype == 2? "selected=\"selected\"" : "";?>>项目名称</option>
+				<option value="3"<?php echo  $searchtype == 3? "selected=\"selected\"" : "";?>>模糊搜索</option>
+            </select>
+            <input name="keyword" type="text" class="inputbg" id="search-keyword" value="<?php echo $keyword;?>" onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}"/ >
+            <button type="submit" class="search-submit" style="background:url(<?php echo $cfg_templets_skin;?>/img/index_r7_c22.jpg); border:none; width:56px; height:23px; color:#fff;">搜索</button>
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>
+<!---FLASHBANNER--->
+<div id="flashbanner">
+    <div id="flashbanner_content">
+        <script src='/plus/ad_js.php?aid=21' language='javascript'></script>
+    </div>
+</div>
+<!---FLASHBANNER结束--->

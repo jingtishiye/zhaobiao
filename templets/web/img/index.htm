@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="{dede:global.cfg_templets_skin/}/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/index.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/all.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/a.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="container"> {dede:include filename="head.htm"/}
+    <!---首页内容--->
+    <div id="page">
+        <div class="page_content">
+            <div class="page_login">
+                <form name="userlogin" action="{dede:global.cfg_memberurl/}/index_do.php" method="POST">
+                    <input type="hidden" name="fmdo" value="login" />
+                    <input type="hidden" name="dopost" value="login" />
+                    <input type="hidden" name="keeptime" value="604800" />
+                    <div>
+                        <label>账号&nbsp;</label>
+                        <input name="userid" type="text" class="inputbg" />
+                    </div>
+                    <div>
+                        <label>密码&nbsp;</label>
+                        <input type="password" name="pwd" class="inputbg"/>
+                        {dede:php}
+                        if(preg_match("#2#", $safe_gdopen))
+                        {
+                        echo '
+                        <div>
+                            <label>验证&nbsp;</label>
+                            <input type="text" name="vdcode" size="8" class="inputbg" />
+                            <img id="vdimgck" align="absmiddle" onClick="this.src=this.src+\'?\'" style="cursor:pointer;margin-left:0px;text-transform:uppercase;" alt="看不清？点击更换" src="'.$cfg_cmspath.'/include/vdimgck.php"/> </div>
+                        ';
+                        }
+                        {/dede:php} </div>
+                    <div class="clear"></div>
+                    <div class="pl25 mt10" style="_margin-top:-18px;">
+                        <button type="submit" class="btn-1" class="login" style="background:url({dede:global.cfg_templets_skin/}/img/index_r16_c27.jpg);width:52px;height:20px;border:none; float:left;">
+                        </button>
+                        <a href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew"  class="zhuche"></a> &nbsp;<a href="{dede:global.cfg_memberurl/}/resetpassword.php">忘记密码?</a>
+                        <div class="clear"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="page_about"> <img src="{dede:global.cfg_templets_skin/}/img/index_r19_c13.jpg" />
+                <div class="page_about_content p23"  style="height:135px; overflow:hidden;">
+                    <p><img src="{dede:global.cfg_templets_skin/}/img/index_r11_c9.jpg" width="154" height="100"  class="fl mr15 mt10"/>
+					{dede:sql sql="select acontent from dede_addon17 where aid='87'"}[field:acontent/]{/dede:sql}
+					</p>
+                </div>
+                <img src="{dede:global.cfg_templets_skin/}/img/index_r23_c14.jpg" /> </div>
+            <div class="clear"></div>
+            <div class="page_list_bg" style="margin-top:-7px;">
+                <div class="p_l_1">
+                    <h2>招标公告<a href="/a/zhaobiao/gonggao/index.html" title=""></a></h2>
+                    <ul>
+                        {dede:arclist typeid='32' row='7'  titlelen='50' infolen=''}
+                        <li><a href="[field:arcurl/]" title="" ><b style="color:#ff0000; font-weight:normal;">[field:flag/]</b>[field:title/]</a><span>[field:stime/] </span></li>
+                        {/dede:arclist}
+                        <div class="clear"></div>
+						
+                    </ul>
+                </div>
+                <div class="p_l_2">
+                    <h2>项目变更公告<a href="/a/zhaobiao/xiangmubiangeng/index.html" title=""></a></h2>
+                    <ul>
+                        {dede:arclist typeid='33' row='7'  titlelen='50' infolen='' 
+                        }
+                        <li><a href="[field:arcurl/]" title=""><b style="color:#ff0000; font-weight:normal;">[field:flag/]</b>[field:title/]</a><span>[field:stime/] </span></li>
+                        {/dede:arclist}
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="p_l_3">
+                    <h2>项目答疑公告<a href="/a/zhaobiao/xiangmudayi/index.html" title=""></a></h2>
+                    <ul>
+                        {dede:arclist typeid='34' row='7'  titlelen='50' infolen='' 
+                        }
+                        <li><a href="[field:arcurl/]" title=""><b style="color:#ff0000; font-weight:normal;">[field:flag/]</b>[field:title/]</a><span>[field:stime/] </span></li>
+                        {/dede:arclist}
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="page_list_bg">
+                <div class="p_l_1">
+                    <h2>预中标公告<a href="/a/zhaobiao/yuzhongbiao/index.html" title=""></a></h2>
+                    <ul>
+                       {dede:arclist typeid='35' row='7'  titlelen='50' infolen='' 
+                        }
+                        <li><a href="[field:arcurl/]" title=""><b style="color:#ff0000; font-weight:normal;">[field:flag/]</b>[field:title/]</a><span>[field:stime/] </span></li>
+                        {/dede:arclist}
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="p_l_2">
+                    <h2>中标公告<a href="/a/zhaobiao/zhongbiao/index.html" title=""></a></h2>
+                    <ul>
+                        {dede:arclist typeid='36' row='7'  titlelen='50' infolen='' 
+                        }
+                        <li><a href="[field:arcurl/]" title=""><b style="color:#ff0000; font-weight:normal;">[field:flag/]</b>[field:title/]</a><span>[field:stime/] </span></li>
+                        {/dede:arclist}
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="p_l_3">
+                    <h2>资格预审公告<a href="/a/zhaobiao/zigeyushen/index.html" title=""></a></h2>
+                    <ul>
+                       {dede:arclist typeid='37' row='7'  titlelen='50' infolen='' 
+                        }
+                        <li><a href="[field:arcurl/]" title=""><b style="color:#ff0000; font-weight:normal;">[field:flag/]</b>[field:title/]</a><span>[field:stime/] </span></li>
+                        {/dede:arclist}
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div>
+                <div class="news fl">
+                    <h2><img src="{dede:global.cfg_templets_skin/}/img/index_r28_c6.jpg" border="0" usemap="#Map" />
+                        <map name="Map" id="Map">
+                            <area shape="rect" coords="421,20,462,39" href="/a/news/index.html" />
+                        </map>
+                    </h2>
+                    <ul>
+                        {dede:arclist typeid='53' row='8'  titlelen='70' infolen='' 
+                        }
+                        <li><a href="[field:arcurl/]" title=""><b style="color:#ff0000; font-weight:normal;">[field:flag/]</b>[field:title/]</a><span>[field:stime/] </span></li>
+                        {/dede:arclist}
+                        <div class="clear"></div>
+                    </ul>
+                    <img src="{dede:global.cfg_templets_skin/}/img/index_r36_c6.jpg" /> </div>
+                <div class="news fr">
+                    <h2><img src="{dede:global.cfg_templets_skin/}/img/index_r28_c16.jpg" border="0" usemap="#Map2" />
+                        <map name="Map2" id="Map2">
+                            <area shape="rect" coords="438,19,477,37" href="/a/hangyenews/index.html" />
+                        </map>
+                    </h2>
+                    <ul>
+                        {dede:arclist typeid='52' row='8'  titlelen='70' infolen='' 
+                        }
+                        <li><a href="[field:arcurl/]" title=""><b style="color:#ff0000; font-weight:normal;">[field:flag/]</b>[field:title/]</a><span>[field:stime/] </span></li>
+                        {/dede:arclist}
+                        <div class="clear"></div>
+                    </ul>
+                    <img src="{dede:global.cfg_templets_skin/}/img/index_r36_c6.jpg" /> </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!---首页内容结束--->
+    {dede:include filename="footer.htm"/} </div>
+</body>
+</html>

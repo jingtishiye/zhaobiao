@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>搜索结果_<?php echo $cfg_webname;?></title>
+<link href="<?php echo $cfg_templets_skin;?>/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $cfg_templets_skin;?>/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $cfg_templets_skin;?>/css/all.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $cfg_templets_skin;?>/css/a.css" rel="stylesheet" type="text/css" />
+</head>
+<?php
+global $db;
+$searchtype = isset($_POST["searchbox"])? intval($_POST["searchbox"]) : "";
+$keyword = isset($_POST["keyword"])? $_POST["keyword"] : "";
+$sql = "";
+if ($searchtype != 0 && $keyword != "") {
+    switch ($searchtype) {
+	    case 1 : {
+		    $sql = "SELECT A.id, A.typeid, A.title, A.pubdate, A.description, A.click, B.zhaobiaobianhao, C.typename, C.typedir FROM dede_archives AS A LEFT JOIN dede_addon18 AS B ON A.id = B.aid LEFT JOIN dede_arctype AS C ON A.typeid = C.id WHERE A.typeid IN (SELECT id FROM dede_arctype WHERE topid = 31) AND B.zhaobiaobianhao LIKE '%".$keyword."%' ORDER BY A.pubdate DESC";
+		};break;
+		case 2 : {
+		    $sql = "SELECT A.id, A.typeid, A.title, A.pubdate, A.description, A.click, B.zhaobiaobianhao, C.typename, C.typedir FROM dede_archives AS A LEFT JOIN dede_addon18 AS B ON A.id = B.aid LEFT JOIN dede_arctype AS C ON A.typeid = C.id WHERE A.typeid IN (SELECT id FROM dede_arctype WHERE topid = 31) AND A.title LIKE '%".$keyword."%' ORDER BY A.pubdate DESC";
+		};break;
+		case 3 : {
+		    $sql = "SELECT A.id, A.title, A.description, A.click, A.pubdate, A.typeid, B.typename, B.typedir FROM dede_archives AS A LEFT JOIN dede_arctype AS B ON A.typeid = B.id WHERE A.title LIKE '%".$keyword."%' ORDER BY A.pubdate DESC";
+		};break;
+	}
+	
+	$db->SetQuery($sql);
+	$db->Execute();
+}
+//var_dump($searchtype, $keyword);
+//echo $sql;
+
+?>
+<body>
+<div id="container"> 
+    <?php require_once("search_head.htm");?>
+    <!---首页内容--->
+    <div id="page">
+        <div class="where">搜索结果<span>Search</span></div>
+        <div class="left_menu fl">
+            <div class="left_menu_top"></div>
+            <div class="left_menu_content">
+                <ul>
+                    <li><a href="#" title="" class="menu_dangqian">搜索结果</a></li>
+                </ul>
+            </div>
+            <div class="left_menu_bottom"></div>
+        </div>
+        <div class=" fr">
+            <div class="right_top"></div>
+            <div class="right_content">
+                <div class="search_box">
+                    <form name="formsearch" action="/search.php" method="post">
+                        <input name="keyword" type="text" class="inputbg" id="search-keyword" value="<?php echo $keyword;?>" onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+                        <select name="searchbox" id="search-option">
+                            <option value="1"<?php echo  $searchtype == 1? "selected=\"selected\"" : "";?>>招标编号</option>
+							<option value="2"<?php echo  $searchtype == 2? "selected=\"selected\"" : "";?>>项目名称</option>
+                            <option value="3"<?php echo  $searchtype == 3? "selected=\"selected\"" : "";?>>模糊搜索</option>
+                        </select>
+                        <button type="submit" class="search-submit" style="background:url(<?php echo $cfg_templets_skin;?>/img/index_r7_c22.jpg); border:none; width:56px; height:23px; color:#fff;">搜索</button>
+                    </form>
+                </div>
+                <div class="result_content">
+                    <div class="sidebar"> </div>
+                    <div class="resultlist">
+                        <ul>
+						<?php
+						while ($row = $db->GetArray()) {
+						$arcinfo = GetOneArchive($row["id"]);
+						?>
+                            <li>
+                                <h3 class="mt20" style=" height:30px; line-height:30px;border-bottom:1px dotted #ddd;"><a href="<?php echo $arcinfo["arcurl"];?>" target="_blank"><?php echo $row["title"];?></a></h3>
+                                <p style="color:#666; line-height:23px; padding:10px; font-size:12px;"><?php echo $row['description'];?>...</p>
+                                <span> <a href="<?php echo $arcinfo["arcurl"];?>" target="_blank"><?php echo $cfg_basehost.$arcinfo["arcurl"];?></a> <small>分类：</small><a href="<?php echo MfTypedir($row["typedir"]);?>" target="_blank"><?php echo $row["typename"];?></a> <small>点击：</small><?php echo $row["click"];?> <small>日期：</small><?php echo date("Y-m-d H:i:s", $row["pubdate"]);?></span> 
+							</li>
+				        <?php
+						}
+						?>
+                        </ul>
+                        <div class="fl dede_pages">
+                            <ul class="pagelist">
+                                
+                            </ul>
+                        </div>
+                        <!-- /pages -->
+                    </div>
+                    <!-- /listbox -->
+                </div>
+            </div>
+            <div class="right_bottom"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!---首页内容结束--->
+    <?php require_once("search_footer.htm");?> </div>
+</body>
+</html>

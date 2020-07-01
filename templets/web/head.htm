@@ -1,0 +1,87 @@
+<!---头部--->
+
+<div id="header" >
+    <div id="header_content" style="background:url(/templets/web/img/index_r11_c9.jpg) left -1px; width:980px;"> <a href="/index.html" title="" class="logo" style="display:none;"></a>
+	<div style="position:absolute; left:349px; top:25px; display:none;" >
+	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="422" height="74">
+          <param name="movie" value="/aaa.swf" />
+          <param name="quality" value="high" />
+          <embed src="/aaa.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="422" height="74"></embed>
+	  </object>
+	</div>
+        <div class="toplink" style="top:15px; color:#fff;"> <a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{dede:global.cfg_basehost/}');" style="color:#fff;">设为首页</a> | <a href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')" style="color:#fff;">加入收藏</a> | <a href="/a/lianxiwomen/20120619/88.html" title="" style="color:#fff;">联系我们</a> </div>
+		<div id="linkweb" style="position:absolute; top:30px; right:-5px; color:#fff; height:22px; width:164px; line-height:22px; padding-left:20px; overflow:hidden;">
+</div>
+<script>setInterval("linkweb.innerHTML=new Date().toLocaleString()+' '.charAt(new Date().getDay());",1000);
+</script>
+    </div>
+</div>
+<!---头部结束--->
+<!---导航--->
+<div id="mainnav">
+    <div id="mainnav_content">
+        <ul>
+            <li><a href="/" title="">首页</a></li>
+            {dede:channel type='top' row='9'}
+            <li class="mainnav_line"></li>
+            <li><a href="[field:typeurl/]" title="">[field:typename/]</a></li>
+            {/dede:channel}
+        </ul>
+        <div class="clear"></div>
+    </div>
+</div>
+<!---导航结束--->
+<!---重要通知-->
+<div class="zhongyao"> 
+<div id="demo">
+		<div id="indemo">
+				<div id="demo1"> 
+					{dede:arclist typeid='38' row='5'  titlelen='50' infolen='' 
+    imgwidth='100' imgheight='80'} <a href="[field:arcurl]" title="[field:title/]" class="zh1 displayb fl">[field:title/]&nbsp;&nbsp;[field:stime/]</a>{/dede:arclist} 
+				</div>
+				<div id="demo2"></div>
+		</div>
+</div>
+    <div class="search fr">
+         <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+            <label>信息查询&nbsp;&nbsp;</label>
+           
+            <input name="q" type="text" class="inputbg" id="search-keyword" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}"/ >
+            <button type="submit" class="search-submit" style="background:url({dede:global.cfg_templets_skin/}/img/index_r7_c22.jpg); border:none; width:56px; height:23px; color:#fff;">搜索</button>
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>
+<!---FLASHBANNER--->
+<div id="flashbanner">
+    <div id="flashbanner_content">
+        <!--<script src='/plus/ad_js.php?aid=21' language='javascript'></script>-->
+		
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="981" height="171">
+          <param name="movie" value="/aaa.swf" />
+          <param name="quality" value="high" />
+          <embed src="/aaa.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="981" height="171"></embed>
+	  </object>
+    </div>
+</div>
+<!---FLASHBANNER结束--->
+
+<script>
+    <!--
+    var speed=20; //数字越大速度越慢
+    var tab=document.getElementById("demo");
+    var tab1=document.getElementById("demo1");
+    var tab2=document.getElementById("demo2");
+    tab2.innerHTML=tab1.innerHTML;
+    function Marquee(){
+    if(tab2.offsetWidth-tab.scrollLeft<=0)
+    tab.scrollLeft-=tab1.offsetWidth
+    else{
+    tab.scrollLeft++;
+    }
+    }
+    var MyMar=setInterval(Marquee,speed);
+    tab.onmouseover=function() {clearInterval(MyMar)};
+    tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+    -->
+    </script>

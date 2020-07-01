@@ -1,0 +1,7 @@
+INSERT INTO `dede_flink` VALUES('22','1','http://www.adminbuy.cn/','手机网站模版','','','','1459845103','1','2');
+INSERT INTO `dede_flink` VALUES('21','1','http://www.adminbuy.cn/','模板王','','','','1459843978','1','2');
+INSERT INTO `dede_flink` VALUES('23','1','http://www.adminbuy.cn/','织梦源码','','','','1459845110','1','2');
+INSERT INTO `dede_flink` VALUES('24','1','http://www.adminbuy.cn/','织梦模版','','','','1459845117','1','2');
+INSERT INTO `dede_flink` VALUES('25','1','http://www.adminbuy.cn/','discuz模版','','','','1459845126','1','2');
+INSERT INTO `dede_flink` VALUES('26','1','http://fang.adminbuy.cn/','仿站网','','','','1459845184','1','2');
+INSERT INTO `dede_flink` VALUES('27','1','http://sc.adminbuy.cn/','图标大全','','','','1459845192','1','2');

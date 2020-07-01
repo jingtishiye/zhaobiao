@@ -1,0 +1,158 @@
+﻿@charset "utf-8";
+
+
+			
+/****************内容*********************/	
+#page{
+	margin:5px auto;}
+	
+	
+		
+		
+	.page_content{}
+
+	
+		.page_login{
+			width:250px;
+			height:139px;
+			background:url(../img/index_r20_c9.jpg) no-repeat;
+			float:left;
+			padding:40px 0 0 20px;
+			color:#666;}
+			
+			.page_login div{
+				height:28px;
+				line-height:28px;}
+				
+				.login{
+					background:url(../img/index_r16_c27.jpg);
+					width:52px;
+					height:20px;
+					border:none;}
+					
+				.zhuche{
+					background:url(../img/index_r16_c30.jpg);
+					width:52px;
+					height:20px;
+					border:none;
+					margin-left:8px;
+					display:block;
+					float:left;}
+			
+		/templets/web/{
+			
+			height:200px;
+			float:right;
+			}
+			
+			/templets/web/_content{
+				background:url(../img/index_r21_c13.jpg) repeat-y;
+				height:300px;
+				padding:0px 20px 5px 20px;
+				color:#666;}
+				
+				
+		.page_list_bg{
+			height:428px;
+			width:960px;
+			background:url(../img/index_r26_c6.jpg) repeat;
+			margin:8px 0;
+			padding:14px 15px 5px 15px;}
+			
+			.page_list_bg ul{
+				padding:5px 5px 5px 5px;
+				
+					}
+				
+				.page_list_bg ul li{position:relative;}
+				
+					.page_list_bg ul li a{
+						height:25px;
+						line-height:25px;
+						display:block;
+						float:left;
+						background:url(../img/index_r30_c17.jpg) no-repeat left center;
+						padding-left:10px;
+						white-space:nowrap;
+						overflow:hidden; 
+						text-overflow:ellipsis;
+						width:220px;
+						color:#666;}
+						
+					
+						
+						.page_list_bg ul li a:hover{
+							background:url(../img/index_r32_c17.jpg) no-repeat left center;
+							color:#FF0000;
+							font-weight:bold;}
+							
+							
+						
+					.page_list_bg ul li span{
+						display:block;
+						float:right;
+						color:#999;
+						height:25px;
+						line-height:25px;}
+			
+			.p_l_1{
+				width:305px;
+				height:400px;
+				float:left;}
+				
+			.p_l_2{
+				width:305px;
+				height:400px;
+				float:left;
+				margin-left:21px;}
+				
+			.p_l_3{
+				width:305px;
+				height:400px;
+				float:left;
+				margin-left:23px;}
+			
+			.page_list_bg h2{
+				position:relative;
+				color:#fff;
+				width:300px;
+				padding-left:7px;
+				height:26px;
+				line-height:26px;
+				font-size:14px;
+				font-family:"宋体";}
+				
+				.page_list_bg h2 a{
+					display:block;
+					position:absolute;
+					right:5px;
+					top:0;
+					height:17px;
+					width:40px;}
+					
+		.news ul{
+			background:url(../img/index_r34_c6.jpg) repeat-y;
+			width:440px;
+			padding:5px 25px 10px 25px;}
+			
+				
+					.news ul li a{
+						height:25px;
+						line-height:25px;
+						display:block;
+						float:left;
+						background:url(../img/index_r30_c17.jpg) no-repeat left center;
+						padding-left:10px;
+						width:340px;}
+						
+						.news ul li a:hover{
+							background:url(../img/index_r32_c17.jpg) no-repeat left center;
+							color:#FF0000;
+							font-weight:bold;}
+						
+					.news ul li span{
+						display:block;
+						float:right;
+						color:#999;
+						height:25px;
+						line-height:25px;}

@@ -1,0 +1,1 @@
+INSERT INTO `dede_admin` VALUES('1','10','admin','f297a57a5a743894a0e4','admin','sc.adminbuy.cn','fang.adminbuy.cn','52,38,39,40,41,42,53,57,56,55,31,32,33,34,35,36,37','1354867330','183.15.92.208');

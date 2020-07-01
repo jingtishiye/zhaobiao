@@ -1,0 +1,66 @@
+<!---头部--->
+
+<div id="header" >
+    <div id="header_content"> <a href="/index.html" title="" class="logo"></a>
+        <div class="toplink"> <a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{dede:global.cfg_basehost/}');">设为首页</a> | <a href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')">加入收藏</a> | <a href="/a/contact.html" title="">联系我们</a> </div>
+	<div id="linkweb" style="position:absolute; top:80px; right:11px; color:#444; height:22px; width:174px; background:url({dede:global.cfg_templets_skin/}/img/date.jpg); line-height:22px; padding-left:10px;">
+</div>
+<script>setInterval("linkweb.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());",1000);
+</script>
+    </div>
+</div>
+<!---头部结束--->
+<!---导航--->
+<div id="mainnav">
+    <div id="mainnav_content">
+        <ul>
+            <li><a href="/index.html" title="">首页</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/gaikuang/2012/0619/87.html" title="">公司概况</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/fuwuliucheng/20120619/89.html" title="">服务流程</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/zhaobiao/index_1.html" title="">招标采购</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/zhongyaotongzhi/index.html" title="">重要通知</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/zhengcefagui/index.html" title="">政策法规</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/chengpinzhuanjia/index.html" title="">诚聘专家</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/ziliaoxiazai/index.html" title="">资料下载</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/rencaizhaopin/index.html" title="">人才招聘</a></li>
+            <li class="mainnav_line"></li>
+            <li><a href="/a/lianxiwomen/20120619/88.html" title="">联系我们</a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</div>
+<!---导航结束--->
+<!---重要通知-->
+<div class="zhongyao"> 
+{dede:arclist typeid='38' row='1'  titlelen='50' infolen='' 
+    imgwidth='100' imgheight='80'} <a href="[field:arcurl]" title="[field:title/]" class="zh1 displayb fl">[field:title/]&nbsp;&nbsp;[field:stime/]{/dede:arclist} </a>
+    <div class="search fr">
+        <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+            <input type="hidden" name="kwtype" value="0" />
+            <label>信息查询&nbsp;&nbsp;</label>
+            <select name="searchtype">
+                <option value="aaa" selected='1'>招标编号</option>
+                <option value="title">项目名称</option>
+                <option value="titlekeyword"> 模糊搜索</option>
+            </select>
+            <input name="q" type="text" class="inputbg" id="search-keyword" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}"/ >
+            <button type="submit" class="search-submit" style="background:url({dede:global.cfg_templets_skin/}/img/index_r7_c22.jpg); border:none; width:56px; height:23px; color:#fff;">搜索</button>
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>
+<!---FLASHBANNER--->
+<div id="flashbanner">
+    <div id="flashbanner_content">
+        <script src='/plus/ad_js.php?aid=21' language='javascript'></script>
+    </div>
+</div>
+<!---FLASHBANNER结束--->

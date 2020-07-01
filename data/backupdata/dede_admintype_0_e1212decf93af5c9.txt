@@ -1,0 +1,3 @@
+INSERT INTO `dede_admintype` VALUES('1','发布公告，修改公告权限','1','t_AccList a_AccNew a_AccList a_AccEdit a_MyList a_MyEdit a_MyDel sys_MdPwd');
+INSERT INTO `dede_admintype` VALUES('5','审核错误公告权限','1','t_List t_AccList a_List a_New a_Edit a_Del a_Commend a_Check a_AccNew a_AccList a_AccEdit a_AccDel a_AccCheck a_MyList a_MyEdit a_MyDel a_MyCheck a_Recycling co_AddNote co_EditNote co_PlayNote sys_MdPwd sys_ArcTj sys_Keyword sys_MakeHtml sys_Upload sys_MyUpload');
+INSERT INTO `dede_admintype` VALUES('10','超级管理员','1','admin_AllowAll ');

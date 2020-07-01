@@ -1,0 +1,2 @@
+INSERT INTO `dede_member_msg` VALUES('8','1','admin','127.0.0.1','1','1340107648','<img src=\'/member/templets/images/smiley/3.gif\' style=\'cursor: pointer; position: relative;\'>');
+INSERT INTO `dede_member_msg` VALUES('9','35','沃尔奔达','183.14.204.241','1','1353919695','大家好, 我来自深圳沃尔奔达新能源股份,在发电机组设备及工程项目方面.期待与你的沟通与合作!');

@@ -1,0 +1,2 @@
+INSERT INTO `dede_mtypes` VALUES('1','asdfadsf','1','15');
+INSERT INTO `dede_mtypes` VALUES('2','╫Ю╤Шяеж╫╫М','1','24');

@@ -1,0 +1,1 @@
+INSERT INTO `dede_myad` VALUES('21','0','0','banner1','banner1','0','1339841578','1342433578','<a href=\"/a/about.html\"><img src=\"/templets/default/img/index_r11_c9.jpg\"  border=\"0\" /></a>','');

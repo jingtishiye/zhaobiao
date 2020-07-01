@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{dede:field.seotitle /}-{dede:global.cfg_webname/}</title>
+<link href="{dede:global.cfg_templets_skin/}/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/all.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/a.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="ie6png/iepngfix_tilebg.js"></script>
+</head>
+<body>
+<div id="container">
+    {dede:include filename="head.htm"/}
+    <!---首页内容--->
+    <div id="page">
+	
+		<div class="where">资料下载<span>Download
+</span></div>
+		
+		<div class="left_menu fl">
+			<div class="left_menu_top"></div>
+			<div class="left_menu_content">
+				<ul>
+					<li><a href="/a/ziliaoxiazai/index.html" title=""   class="menu_dangqian">资料下载</a></li>
+				</ul>
+			</div>
+			<div class="left_menu_bottom"></div>
+		</div>
+		
+		
+		<div class=" fr">
+			<div class="right_top"></div>
+			<div class="right_content">
+				<div>
+				<a href="#" title="" onclick="window.print()" style="display:block; float:right; background:#F6F6F6; height:20px; width:85px; border:1px solid #eee; color:#000; line-height:20px; text-align:center;">打印本页内容</a>
+					<div class="clear"></div>
+				</div>
+				<h1 class="arc_title">{dede:field.title/}</h1>
+				<h4 style="color:#888; font-weight:normal; text-align:center; border-bottom:2px solid #F8F8F8; height:35px; font-size:12px;line-height:35px; margin-bottom:10px;">&nbsp;点击:<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>次&nbsp;&nbsp;发布日期：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}&nbsp; &nbsp; 发布人：{dede:field.writer/} </h4>
+				<div class="arc_content">
+				<p>{dede:field.body/}</p></div>
+				
+				<div>
+					
+					<div class="anext">{dede:prenext get='pre'/}<br /><br />{dede:prenext get='next'/}</div>
+				</div>
+				
+				
+			</div>
+			<div class="right_bottom"></div>
+		</div>
+		<div class="clear"></div>
+		
+	
+    </div>
+    <!---首页内容结束--->
+ {dede:include filename="footer.htm"/} 
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,lengend,button,input,textarea,th,td,img{margin:0; padding:0;}
+	
+body{background:#fff; font-size:12px; font-family:"宋体";}
+
+h1 {ont-size: 18px; }
+
+h2 {font-size: 16px; }
+
+h3 {font-size: 14px; }
+
+address, cite, dfn, em, var {font-style: normal; } 
+
+code, kbd, pre, samp, tt {font-family: "Courier New", Courier, monospace; }
+
+small{font-size: 12px; } 
+
+ul, ol, li {list-style: none; }
+
+a{text-decoration: none; color:#666; margin:0; padding:0;}
+
+a:hover {text-decoration:none; color:#000; }
+
+abbr[title], acronym[title] {border-bottom: 1px dotted;cursor: help;}
+	 
+q:before, q:after { content: ''; }
+
+legend { color: #000; } 
+
+fieldset, img {border: none;vertical-align:middle;}
+	
+button, input, select, textarea { font-size: 100%;}
+	
+table{border-collapse: collapse;border-spacing: 0;}
+	
+hr {border: none;height: 1px;}
+	
+html {overflow-y: scroll; }
+	
+.clear{clear:both;height:1px;width:100%; overflow:hidden; margin-top:-1px;}
+
+div, img, a, p, span { behavior: url(ie6png/iepngfix.htc); }

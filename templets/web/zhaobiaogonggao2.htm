@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{dede:field.seotitle /}-{dede:global.cfg_webname/}</title>
+<link href="{dede:global.cfg_templets_skin/}/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/all.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/css/a.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="ie6png/iepngfix_tilebg.js"></script>
+<style type="text/css">
+.fenye123{
+	margin-top:15px;
+	line-height:25px;
+	height:25px;}
+	
+	.fenye123 a{
+		display:block;
+		float:left;
+		height:25px;
+		min-width:35px;
+		background:#f8f8f8;
+		border:1px solid #ddd;
+		color:#333333;
+		text-align:center;
+		line-height:25px;
+		margin-right:3px;}
+		
+		.fenye123 a:hover{
+			background: #FF6600;
+			border:1px solid #CC3300;
+			color:#fff;}
+			
+		.fenye123 strong{
+			display:block;
+			float:left;
+			height:25px;
+			width:30px;
+			background: #FF6600;
+			border:1px solid #CC3300;
+			color:#fff;
+			text-align:center;
+			line-height:25px;
+			margin-right:3px;}
+			
+		
+</style>
+</head>
+<body>
+<div id="container">
+    {dede:include filename="head.htm"/}
+    <!---首页内容--->
+    <div id="page">
+	
+		<div class="where">招标采购<span>Procurement</span></div>
+		
+		<div class="left_menu fl">
+			<div class="left_menu_top"></div>
+			<div class="left_menu_content">
+				<ul>
+					<li><a href="/zhaobiao/index_1.html" title="" class="menu_dangqian">采购公告</a></li>
+					<li><a href="/a/zhaobiao/xiangmubiangeng/index.html" title="" >项目延期(变更)公告</a></li>
+					<li><a href="/a/zhaobiao/xiangmudayi/index.html" title="" >项目答疑公告</a></li>
+					<li><a href="/a/zhaobiao/yuzhongbiao/index.html" title="" >预中标(成交)公告</a></li>
+					<li><a href="/a/zhaobiao/zhongbiao/index.html" title="" >中标(成交)公告</a></li>
+					<li><a href="/a/zhaobiao/zigeyushen/index.html" title="">资格预审公告</a></li>
+				</ul>
+		  </div>
+		  <div class="left_menu_bottom"></div>
+		</div>
+		
+		
+		<div class=" fr">
+			<div class="right_top"></div>
+			<div class="right_content">
+				<div class="tab">
+					<a href="/zhaobiao/index_1.html" title=""class="zhaobiao_dangqian">全部招标</a>
+					<a href="/a/zhaobiao/gonggao/guoji/index.html" title="" >国际招标公告</a>
+					<a href="/a/zhaobiao/gonggao/gongcheng/index.html" title="" >工程招标公告</a>
+					<a href="/a/zhaobiao/gonggao/zhengfu/index.html" title="" >政府采购公告</a>
+					<a href="/a/zhaobiao/gonggao/qita/index.html" title="">其他招标公告</a>
+					<div class="clear"></div>
+				</div>
+				
+				<ul class="zhaobiao_list">
+					{dede:freelist/}
+                    <div class="clear"></div>
+                </ul>
+				
+
+				
+				<div class="fenye123" style="color:#666;">{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize='5'/}<div class="clear"></div></div>
+				
+				
+			</div>
+			<div class="right_bottom"></div>
+		</div>
+		<div class="clear"></div>
+		
+	
+    </div>
+    <!---首页内容结束--->
+{dede:include filename="footer.htm"/} 
+</div>
+</body>
+</html>

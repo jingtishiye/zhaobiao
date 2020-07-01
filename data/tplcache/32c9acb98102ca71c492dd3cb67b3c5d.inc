@@ -1,0 +1,1 @@
+<li><a href="[field:arcurl/]" title="[field:title/]"><span class="tit">[[field:typename/]]</span>[field:title/]&nbsp;&nbsp;<b style="color:#ff0000;">[field:flag/]</b></a><span class="time">[field:stime/]</span></li>
