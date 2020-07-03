@@ -124,15 +124,14 @@ if( preg_match('/windows/i', @getenv('OS')) )
 }
 
 //Session保存路径
-$enkey = substr(md5(substr($cfg_domain_cookie,0,5)),0,10);
+/*$enkey = substr(md5(substr($cfg_domain_cookie,0,5)),0,10);
 $sessSavePath = DEDEDATA."/sessions_{$enkey}";
 if ( !is_dir($sessSavePath) ) mkdir($sessSavePath);
 
 if(is_writeable($sessSavePath) && is_readable($sessSavePath))
 {
     session_save_path($sessSavePath);
-}
-
+}*/
 //系统配置参数
 require_once(DEDEDATA."/config.cache.inc.php");
 
