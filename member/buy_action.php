@@ -152,13 +152,14 @@ if(!isset($paytype))
         );
         require_once DEDEDATA.'/payment/'.$rs['code'].'.php';
     }
+    $row = $dsql->GetOne("SELECT * FROM #@__member_operation WHERE buyid='{$buyid}'");
+    $order['p_name'] = $row['pname'];
     $button=$pay->GetCode($order,$payment);
     $dtp = new DedeTemplate();
     $carts = array( 'orders_id' => $buyid,
                     'cart_count' => '1',
                     'price_count' => sprintf("%01.2f", $price)
                      );
-    $row = $dsql->GetOne("SELECT pname,money FROM #@__member_operation WHERE buyid='{$buyid}'");
     $dtp->SetVar('pay_name',$row['pname']);
     $dtp->SetVar('price',$row['money']);
     $dtp->SetVar('pay_way',$rs['name']);

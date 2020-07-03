@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/include/arc.archives.class.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/include/common.func.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/include/common.inc.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/include/dedesql.class.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/include/dedetemplate.class.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/include/payment/alipay.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/include/payment/alipayNotify.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/include/payment/cod.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/include/payment/yeepay.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/include/shopcar.class.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/buy.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/buy_action.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/config.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/inc/config_pay_alipay.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/inc/config_space.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/index.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/index_do.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/login.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/templets/buy.htm" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/templets/buy_action_payment.htm" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/templets/head.htm" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/templets/menu.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/templets/mypay.htm" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/templets/operation.htm" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/member/templets/shops_action_payment.htm" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/plus/carbuyaction.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templets/plus/view_msg.htm" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templets/web/head.htm" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

@@ -23,6 +23,8 @@ define('DEDECONTROL', './control');
 define('DEDEAPPTPL', './templates');
 
 define('DEBUG_LEVEL', FALSE);
+ini_set("session.save_handler", "redis");
+ini_set("session.save_path", "tcp://r-2zewh21w65iemdekon.redis.rds.aliyuncs.com:6379?auth=E9r52k50eGaXwGNI");
 
 if (version_compare(PHP_VERSION, '5.3.0', '<')) 
 {

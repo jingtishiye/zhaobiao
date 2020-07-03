@@ -249,7 +249,7 @@ else if($fmdo=='login')
             $vdcode = '';
         }
         $svali = GetCkVdValue();
-        if(preg_match("/2/",$safe_gdopen)){
+        /*if(preg_match("/2/",$safe_gdopen)){
             if(strtolower($vdcode)!=$svali || $svali=='')
             {
                 ResetVdValue();
@@ -257,7 +257,7 @@ else if($fmdo=='login')
                 exit();
             }
             
-        }
+        }*/
         if(CheckUserID($userid,'',false)!='ok')
         {
             ResetVdValue();

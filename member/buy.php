@@ -20,7 +20,7 @@ while($row = $dsql->GetObject())
     $row->money = sprintf("%01.2f", $row->money);
     $moneycards .= "<tr align='center'>
     <td><input type='radio' name='pid' value='{$row->tid}'></td>
-    <td><strong>{$row->pname}</strong></td>
+    
     <td>{$row->num}ธ๖</td>
     <td>{$row->money}ิช</td>
     </tr>
@@ -33,7 +33,7 @@ while($row = $dsql->GetObject())
     $row->money = sprintf("%01.2f", $row->money); 
     $membertypes .= "<tr align='center'>
     <td><input type='radio' name='pid' value='{$row->aid}'></td>
-    <td><strong>{$row->pname}</strong></td>
+  
     <td>{$row->membername}</td>
     <td>{$row->exptime}</td>
     <td>{$row->money}ิช</td>

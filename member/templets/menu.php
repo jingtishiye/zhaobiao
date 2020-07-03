@@ -97,7 +97,7 @@
         <ul id="menuFirst">
         	<li class="icon mystow"><a href="../member/mystow.php"><b></b>我的收藏夹</a></li>
         <?php
-        if($cfg_feedback_forbid=='N')
+        /*if($cfg_feedback_forbid=='N')
         {
           //<li class="icon feedback"><a href='../member/myfeedback.php'>我的评论</a></li>
         }
@@ -107,12 +107,12 @@
         	@preg_match("/\/(.+?)\//is", $nnarr['indexurl'],$matches);
         	$nnarr['class'] = isset($matches[1]) ? $matches[1] : 'channel';
         	$nnarr['indexurl'] = str_replace("**","=",$nnarr['indexurl']);
-        ?>
-        <li class="<?php echo $nnarr['class'];?>"><a href="<?php echo $nnarr['indexurl']; ?>"><b></b><?php echo $nnarr['indexname']; ?>模块</a></li>
+        */?><!--
+        <li class="<?php /*echo $nnarr['class'];*/?>"><a href="<?php /*echo $nnarr['indexurl']; */?>"><b></b><?php /*echo $nnarr['indexname']; */?>模块</a></li>
         <?php
-        }
-        ?>
-        </ul>
+/*        }
+        */?>
+        </ul>-->
         <?php
       }
       ?>

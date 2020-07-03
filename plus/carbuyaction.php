@@ -333,15 +333,9 @@ if(!isset($dopost) || empty($dopost)){
     exit();
 } else if ($dopost == 'return')
 {
-    $write_list = array('alipay', 'bank', 'cod', 'yeepay');
-    if (in_array($code, $write_list))
-    {
-        require_once DEDEINC.'/payment/'.$code.'.php';
-        $pay = new $code;
-        $msg=$pay->respond();
+        require_once DEDEINC.'/payment/alipay.php';
+        $pay = new Alipay();
+        $msg=$pay->returnUrl();
         ShowMsg($msg, "javascript:;", 0, 3000);
-        exit();  
-    } else {
-        exit('Error:File Type Can\'t Recognized!');
-    }
+        exit();
 }
